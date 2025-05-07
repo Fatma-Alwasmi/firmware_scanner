@@ -548,7 +548,7 @@ def check_dangerous_functions(firmware_root):
             
             if is_binary and os.path.isfile(file_path):
                 try:
-                    # Try to use objdump to get symbol information with addresses
+                    # objdump to get symbol information with addresses
                     result = subprocess.run(['objdump', '-T', file_path], 
                                           capture_output=True, 
                                           text=True, 
